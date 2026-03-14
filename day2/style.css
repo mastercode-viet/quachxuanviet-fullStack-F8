@@ -1,0 +1,24 @@
+.job-title {
+  color: lightcoral;
+  text-align: center;
+  font-size: 16px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 6px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #2c3e50;
+}
+.contact-info p a {
+  text-decoration: none;
+  color: #2c3e50;
+}
