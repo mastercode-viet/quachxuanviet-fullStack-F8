@@ -72,36 +72,43 @@
 /* CSS CV END*/
 
 /* CSS MENU START*/
+.menu-bg{
+  background-color: #0e0e0e;
+}
 .menu {
-  background-color: #a47673;
+  background: #4a70ce;
   width: 914px;
   height: 410px;
+  margin: 0 auto;
+    margin-top: 8px;
 }
 .menu-list {
-  display: flex;
-  list-style: none;
-  background: #3E5CCA;
-  justify-content: space-around;
-  gap:44px;
- margin: 6px 10px 0;
-}
-.menu-list li  {
-height: 52px;
-line-height: 52px;
+   display: inline-block;
+   background-color: #3E5CCA;
+   padding: 0 40px;
+     width: 914px;
+     font-size: 0;
 
 }
 
-
+.menu-list li {
+  display: inline-block;
+}
 .menu-list li a {
+  display: inline-block;
   text-decoration: none;
   color: #fff;
-  font-size: 14px;
-  padding: 18px 13px;
+  padding: 16px 19px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+ .menu-list .active a {  
+background-color: #fff;
+color: #0e0e0e;
 }
 .menu-list li a:hover {
-  color: #0e0e0e;
   background-color: #fff;
-  
+    color: #0e0e0e;
 }
 
 /* CSS MENU END*/
