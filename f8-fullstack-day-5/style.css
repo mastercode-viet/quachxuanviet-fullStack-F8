@@ -7,6 +7,7 @@
   color: #141414;
   font-size: 14px;
 }
+/* CSS CV START*/
 .wapper {
   background-color: #0e0e0e;
 }
@@ -67,3 +68,40 @@
 .exp-degree {
   padding-top: 8px;
 }
+
+/* CSS CV END*/
+
+/* CSS MENU START*/
+.menu {
+  background-color: #a47673;
+  width: 914px;
+  height: 410px;
+}
+.menu-list {
+  display: flex;
+  list-style: none;
+  background: #3E5CCA;
+  justify-content: space-around;
+  gap:44px;
+ margin: 6px 10px 0;
+}
+.menu-list li  {
+height: 52px;
+line-height: 52px;
+
+}
+
+
+.menu-list li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  padding: 18px 13px;
+}
+.menu-list li a:hover {
+  color: #0e0e0e;
+  background-color: #fff;
+  
+}
+
+/* CSS MENU END*/
