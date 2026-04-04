@@ -72,7 +72,7 @@
 /* CSS CV END*/
 
 /* CSS MENU START*/
-.menu-bg{
+.menu-bg {
   background-color: #0e0e0e;
 }
 .menu {
@@ -80,15 +80,14 @@
   width: 914px;
   height: 410px;
   margin: 0 auto;
-    margin-top: 8px;
+  margin-top: 8px;
 }
 .menu-list {
-   display: inline-block;
-   background-color: #3E5CCA;
-   padding: 0 40px;
-     width: 914px;
-     font-size: 0;
-
+  display: inline-block;
+  background-color: #3e5cca;
+  padding: 0 40px;
+  width: 914px;
+  font-size: 0;
 }
 
 .menu-list li {
@@ -102,13 +101,72 @@
   font-weight: 400;
   font-family: "Poppins", sans-serif;
 }
- .menu-list .active a {  
-background-color: #fff;
-color: #0e0e0e;
+.menu-list .active a {
+  background-color: #fff;
+  color: #0e0e0e;
 }
 .menu-list li a:hover {
   background-color: #fff;
-    color: #0e0e0e;
+  color: #0e0e0e;
 }
 
 /* CSS MENU END*/
+
+/* CSS FORM START*/
+/* .form-bg{
+  background-color: #ffe4c9  ;
+} */
+.form-register {
+  max-width: 500px;
+  background-color: #ffe4c9;
+  padding: 20px 40px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.form-register h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #383838;
+}
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 14px 0 4px;
+}
+.form-avatar img {
+  border-radius: 20px;
+  cursor: pointer;
+}
+.form-input {
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+.form-gender {
+  display: flex;
+  gap: 20px;
+}
+.input[type="radio"] {
+  display: inline-block;
+  margin-top: -2px;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eb9320;
+  border-radius: 10px;
+  color: aliceblue;
+  display: block;
+  margin: 16px auto 8px;
+  width: 50%;
+}
+.btn:hover{
+  background-color: #e98707;
+}
+/* CSS FORM END */
