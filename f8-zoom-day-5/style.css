@@ -1,0 +1,55 @@
+/* CSS Menu Enhanced START*/
+.menu-bg {
+  background-color: #0e0e0e;
+}
+.menu {
+  background: #4a70ce;
+  width: 956px;
+  height: 410px;
+  margin: 0 auto;
+  margin-top: 8px;
+  text-align: center;  
+}
+.menu-list {
+  display: inline-block;
+  background-color: #3e5cca;
+  width: auto;
+  font-size: 0;
+}
+
+.menu-list li {
+  display: inline-block;
+  border-right: 1px solid #ffffff59;
+}
+
+
+.menu-list li:last-child {
+  border-right: none;
+}
+.menu-list li a::before {
+    content:"\25B6";
+  font-size: 1rem;
+  color: #0ae867;
+  margin-right: 6px;
+
+}
+
+.menu-list li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 16px 19px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+}
+
+.menu-list li a:hover {
+  background-color: #aa3022;
+  color: #0ae867;
+}
+.menu-list li a:active {
+  background-color: #e7fb04;
+}
+
+/* CSS Menu Enhanced END*/
