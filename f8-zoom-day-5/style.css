@@ -8,7 +8,7 @@
   height: 410px;
   margin: 0 auto;
   margin-top: 8px;
-  text-align: center;  
+  text-align: center;
 }
 .menu-list {
   display: inline-block;
@@ -22,16 +22,14 @@
   border-right: 1px solid #ffffff59;
 }
 
-
 .menu-list li:last-child {
   border-right: none;
 }
 .menu-list li a::before {
-    content:"\25B6";
+  content: "\25B6";
   font-size: 1rem;
   color: #0ae867;
   margin-right: 6px;
-
 }
 
 .menu-list li a {
@@ -53,3 +51,85 @@
 }
 
 /* CSS Menu Enhanced END*/
+
+/* CSS FORM START*/
+/* .form-bg{
+  background-color: #ffe4c9  ;
+} */
+ 
+.form-register:focus-within {
+  border: 2px solid #71532512;
+  background-color: #ffe4c98f ;
+}
+.form-register {
+  max-width: 500px;
+  background-color: #ffe4c9;
+  padding: 20px 40px;
+  margin: 10px auto;
+  border-radius: 20px;
+}
+.form-register h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #383838;
+}
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 14px 0 4px;
+}
+.form-avatar img {
+  border-radius: 20px;
+  cursor: pointer;
+}
+.form-input {
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+}
+.form-gender {
+  display: flex;
+  gap: 20px;
+}
+.input[type="radio"] {
+  display: inline-block;
+  margin-top: -2px;
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #eb9320;
+  border-radius: 10px;
+  color: aliceblue;
+  display: block;
+  margin: 16px auto 8px;
+  width: 50%;
+}
+.btn:active {
+  background-color: #138fbd;
+}
+.btn:hover {
+  background-color: #e98707;
+}
+input:focus {
+  border: 2px solid #5dab09;
+}
+input:invalid {
+  border: 2px solid #c02323;
+}
+
+.form-group:has(input[required]) .form-label::after {
+  content: "(*)";
+  color: #d30b0be8;
+  font-weight: 500;
+}
+.form-group:has(input[required]:not(:placeholder-shown)) .form-label::after {
+  content: "";
+}
+/* CSS FORM END */
