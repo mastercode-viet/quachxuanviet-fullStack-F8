@@ -167,7 +167,7 @@ input:invalid {
   border: 1px solid #ccc;
   padding: 4px;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
   margin: 0 auto;
   display: block;
   width: fit-content;
@@ -183,7 +183,7 @@ input:invalid {
   background-color: #4a3f35;
   padding: 6px;
   border-radius: 30px;
-  color: #fff;
+  color: #fffaff;
 }
 .pricing-months .item-active {
   background-color: #4a3f35;
@@ -309,3 +309,122 @@ input:invalid {
 }
 
 /* CSS PRICING END */
+
+/* CSS BLOG START */
+.blog {
+  width: 960px;
+  margin: 0 auto;
+  max-width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  padding: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border: 1px solid #ccc;
+}
+.blog h1 {
+  color: #5e411d;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.blog .meta {
+  color: #7d7d7d;
+  text-align: center;
+}
+.blog img {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+.blog p,
+h2 {
+  padding: 0 30px;
+}
+.blog p.first::first-letter {
+  font-size: 40px;
+  font-weight: bold;
+}
+.blog p::first-line {
+  font-style: italic;
+  color: #c4a37a;
+}
+::selection {
+  color: red;
+  background-color: yellow;
+}
+.blog blockquote {
+  background-color: #f1f1f1;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  border-radius: 10px;
+  color: #b6b1b1;
+}
+.blog blockquote::before {
+  content: "“";
+  color: rgb(153, 13, 13);
+}
+.blog blockquote::after {
+  content: "”";
+  color: rgb(153, 13, 13);
+}
+h2:not(h1),
+h3:not(h1) {
+  color: #aa3022;
+}
+.comments {
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 960px;
+  margin: 10px auto;
+  max-width: 100%;
+  min-height: 100%;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+.comments h2 {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+  padding: 10px 30px;
+  margin: 0;
+}
+.comment-list {
+  padding: 0 30px;
+  margin-top: 5px;
+}
+.comment-item {
+  border-bottom: 15px;
+  display: flex;
+}
+.comment-item:hover {
+  background-color: #dfdede;
+  border-radius: 10px;
+}
+.comment-item .name {
+  font-weight: bold;
+}
+.comment-item .text {
+  color: #0e0e0e;
+  margin-bottom: 15px;
+}
+.comment-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.comment-item:nth-of-type(1) {
+  color: red;
+}
+
+.comment-item:nth-of-type(2) {
+  color: green;
+}
+
+.comment-item:nth-of-type(3) {
+  color: purple;
+}
+/* CSS BLOG END */
