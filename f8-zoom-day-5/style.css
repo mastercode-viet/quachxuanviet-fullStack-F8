@@ -95,10 +95,11 @@
   display: flex;
   gap: 20px;
 }
-.input[type="radio"] {
+input[type="radio"] {
   display: inline-block;
   margin-top: -2px;
 }
+
 .btn {
   background-color: transparent;
   border: none;
@@ -120,7 +121,12 @@
 input:focus {
   border: 2px solid #5dab09;
 }
-input:invalid {
+
+.form-input:invalid:not(:placeholder-shown) {
+  border: 2px solid #c02323;
+}
+
+input:focus:invalid {
   border: 2px solid #c02323;
 }
 
@@ -129,9 +135,7 @@ input:invalid {
   color: #d30b0be8;
   font-weight: 500;
 }
-.form-group:has(input[required]:not(:placeholder-shown)) .form-label::after {
-  content: "";
-}
+
 /* CSS FORM END */
 
 /* CSS PRICING START */
@@ -265,7 +269,7 @@ input:invalid {
 }
 
 .most-popular::before {
-  content: "Most Polular";
+  content: "Most Popular";
   display: block;
   width: fit-content;
   border-radius: 10px;
