@@ -1,0 +1,170 @@
+
+
+:root{
+  --bg-body: #f4f4f9;
+  --primary-color: #2e2e2e;
+  --bg-cv: #ffffff;
+  --bg-sidebar: #eaeaea;
+  --text-heading:#fff;
+  
+}
+/* CSS CV FLEX START */
+main {
+  display: flex;
+  background-color: var(--bg-cv);
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section{
+  color: var(--primary-color);
+
+}
+.profile__name{
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary-color);
+}
+.profile__position{
+    font-size: 2rem;
+  font-weight: 500;
+   text-align: center;
+   color: var(--primary-color);
+}
+.profile__img{
+  border-radius: 50%;
+  border: 10px solid #fff;
+  display: block;
+  margin: 10px auto 10px;
+  
+}
+.section__title{
+  background-color: var(--primary-color);
+  color: var(--text-heading);
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 12px 0;
+  margin: 15px 0 10px 0;
+  letter-spacing: 0.5px;
+}
+.personal__infor {
+   padding: 4px 0;
+   color: var(--primary-color);
+    margin: 0 0 10px;
+}
+.personal__infor-item{
+    padding: 3px 0;
+   
+
+}
+.personal__icon{
+  margin-right: 8px;
+    color: var(--primary-color);
+}
+.personal__infor-item{
+  color: var(--primary-color);
+  font-weight: 100;
+}
+
+.education{
+   margin: 0 0 10px;
+   padding: 4px 0;
+}
+.education__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.education__name{
+  color: var(--primary-color);
+}
+.education__time{
+ font-style: italic;
+ font-size: 1.3rem;
+ color: var(--primary-color);
+}
+.education ul li {
+   padding: 4px 0;
+   color: var(--primary-color);
+}
+.skill{
+  margin: 0 0 10px;
+   padding: 4px 0;
+}
+.skill__list-item {
+   padding: 4px 0;
+   color: var(--primary-color);
+   text-transform: uppercase;
+   white-space: nowrap;
+}
+.person{
+  margin: 0 0 10px;
+   padding: 4px 0
+}
+.person__name{
+   padding: 4px 0;
+}
+.like{
+   padding: 4px 0;
+    white-space: nowrap;
+}
+
+aside {
+flex: 0 0 30%;
+background-color: var(--bg-sidebar);
+padding: 40px 24px;
+}
+
+/* css asside end*/
+.cv__content{
+flex:1;
+background-color: var(--bg-body);
+padding: 40px 30px;
+display: flex;
+flex-direction: column;
+}
+
+.exp__details, .active__details{
+display: flex;
+justify-content: space-between;
+
+}
+.exp__time, .active__time{
+  font-style: italic;
+ font-size: 1.3rem;
+ color: var(--primary-color);
+}
+.exp__position, .active__position{
+  color: var(--primary-color);
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.exp__tasks, .active__tasks{
+  margin: 0 0 10px 0;
+  padding: 4px 0 4px 20px;
+
+}
+.exp__tasks-item , .active__tasks-item {
+  list-style: circle;
+  padding: 4px 0;
+  line-height: 1.6;
+  color: var(--primary-color);
+}
+.exp__tasks-item p , .active__tasks-item p {
+  margin: 0;
+  display: inline;
+}
+.certificate__time, .cup__time {
+  font-weight: 600;
+}
+ .cup__details, .certificate__details{
+  margin: 0 0 10px;
+  padding: 4px 0;
+}
+/* CSS CV FLEX END */
