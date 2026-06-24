@@ -1,0 +1,112 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+    margin:40px auto;
+    display:flex;
+    gap:32px;
+    align-items:flex-start;
+    
+}
+
+/* MAIN */
+
+main{
+    width:70%;
+    background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+main h1{
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    color: rgb(219, 120, 38);
+    margin-left: 20px;
+}
+
+main img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+main::after{
+    content:"Khóa học HTML CSS từ cơ bản đến nâng cao giúp bạn xây dựng giao diện web chuyên nghiệp.";
+    display:block;
+    padding:24px 32px;
+    color:#666;
+    line-height:1.7;
+    font-size:16px;
+}
+/* SIDEBAR */
+
+aside{
+    width:30%;
+    position:sticky;
+    top:20px;
+}
+
+.sidebar-header{
+    background:#fff;
+    padding:20px;
+    border-radius:16px 16px 0 0;
+    border-bottom:1px solid #eee;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+     color: rgb(251, 146, 60);
+}
+
+.sidebar-header h2{
+    font-size:22px;
+}
+
+.sidebar-header span{
+    color:#777;
+    font-size:14px;
+}
+
+.course-list{
+    height:75vh;
+    overflow-y:auto;
+
+    background:#fff;
+    border-radius:0 0 16px 16px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.chapter-title{
+    position:sticky;
+    top:0;
+    background:#fff;
+    padding:14px 20px;
+    font-size:15px;
+    font-weight:700;
+    border-bottom:1px solid #e8e8e8;
+    color: rgb(251, 146, 60);
+    z-index:10;
+}
+
+.chapter ul{
+    list-style:none;
+}
+
+.chapter li{
+    padding:14px 20px;
+    border-bottom:1px solid #f2f2f2;
+    transition:.2s;
+    cursor:pointer;
+}
+
+.chapter li:hover{
+    background:#f8fafc;
+    color: rgb(251, 146, 60);
+    padding-left:28px;
+}
+
