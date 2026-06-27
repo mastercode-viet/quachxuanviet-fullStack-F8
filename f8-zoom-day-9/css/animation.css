@@ -1,0 +1,66 @@
+.dot{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  animation:rotate 2s infinite linear;
+  position: relative;
+}
+.dot::before,
+.dot::after {
+  content: "";
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  border-radius: 50%;
+  background: #000;
+}
+.circle{
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loader{
+display: flex;
+
+}
+.dot::before{
+  animation: Up 4s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+.dot::after{
+  animation: Down 4s ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+@keyframes Up{
+  0%,100%{
+    transform: translateY(-50px) scale(1);
+    opacity: 0.5;
+  }
+  50%{
+    transform: translateY(50px) scale(0.5);
+    opacity: 1;
+  }
+}
+
+@keyframes Down{
+  0%,100%{
+    transform: translateY(50px) scale(0.5);
+    opacity: 1;
+  }
+  50%{
+    transform: translateY(-50px) scale(1);
+    opacity: 0.5;
+  }
+}
+.dot:nth-child(1) { --delay: 0s;   }
+.dot:nth-child(2) { --delay: 0.2s; }
+.dot:nth-child(3) { --delay: 0.4s; }
+.dot:nth-child(4) { --delay: 0.6s; }
+.dot:nth-child(5) { --delay: 0.8s; }
+.dot:nth-child(6) { --delay: 1.0s; }
+.dot:nth-child(7) { --delay: 1.2s; }
