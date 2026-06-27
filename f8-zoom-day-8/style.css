@@ -56,7 +56,6 @@ button {
   width: 100%;
   max-width: 1170px;
   margin: 0 auto;
-
 }
 
 .nav-header {
@@ -68,24 +67,20 @@ button {
 
 .nav-menu {
   display: flex;
-
   justify-content: space-between;
 }
 
 .nav-header .nav {
   display: flex;
-
-
 }
 
 .nav-btn {
   display: flex;
 }
 
-.nav a {
+.nav .nav__item {
   display: inline-block;
   color: #fff;
-  text-transform: uppercase;
   text-decoration: none;
   font-family: var(--heading-font);
   font-size: 1.5rem;
@@ -94,6 +89,45 @@ button {
   padding: 20px;
   cursor: pointer;
 
+}
+.nav > li {
+   position: relative;
+}
+.nav > li:hover .sub-menu{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition:opacity .3s,transform .3s;
+}
+.nav .sub-menu{
+ position: absolute;
+ top:100%;
+ left: -20px;
+ width: 220px;
+ background-color: #fff;
+ opacity: 0;
+ visibility: hidden;
+ transform: translateY(-15px);
+ transition: opacity .3s,transform .3s,visibility 0s ease-in-out .3s;
+}
+.nav .sub-menu li:hover{
+  background-color: var(--primary-color);
+}
+.nav .sub-menu li:hover a{
+  color: #fff;
+}
+ .nav .sub-menu a:hover{
+  transform: translateX(10px);
+}
+.nav .sub-menu  li a{
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 45px;
+     text-decoration: none;
+    display: block;
+    padding: 0 0 0 25px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
 }
 
 .action-header {
@@ -142,6 +176,7 @@ button {
   color: rgba(255, 255, 255, 0.8);
   padding: 0 8px;
 }
+
 
 /* start main  */
 main {
@@ -525,4 +560,16 @@ footer {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 1.5px;
+}
+.action-scroll {
+   position: fixed;
+    right: 30px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
 }
