@@ -1,13 +1,274 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Table</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/admin-tables.css">
 </head>
 
 <body>
+
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th class="left">Business Listing</th>
+                    <th class="right">Start Date</th>
+                    <th class="right">Vendor ID</th>
+                    <th class="center">Status</th>
+                    <th class="left">Region</th>
+                    <th class="right">Posts</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=1" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Krusty Krab Ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2015-08-21">8/21/15</time></td>
+                    <td class="right">765594</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">Canada (Central)</td>
+                    <td class="right">70</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=2" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">NetRangler Inc.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2016-05-07">5/7/16</time></td>
+                    <td class="right">558612</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">US East (Ohio)</td>
+                    <td class="right">41</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=3" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">ChumHum ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-05-19">5/19/12</time></td>
+                    <td class="right">665137</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Ireland)</td>
+                    <td class="right">46</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=4" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Rich Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-09-04">9/4/12</time></td>
+                    <td class="right">520015</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">EU (London)</td>
+                    <td class="right">15</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=5" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Wayne Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2014-06-19">6/19/14</time></td>
+                    <td class="right">204349</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Stockholm)</td>
+                    <td class="right">33</td>
+                </tr>
+
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=6" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Krusty Krab Ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2015-08-21">8/21/15</time></td>
+                    <td class="right">765594</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">Canada (Central)</td>
+                    <td class="right">70</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=7" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">NetRangler Inc.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2016-05-07">5/7/16</time></td>
+                    <td class="right">558612</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">US East (Ohio)</td>
+                    <td class="right">41</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=8" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">ChumHum ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-05-19">5/19/12</time></td>
+                    <td class="right">665137</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Ireland)</td>
+                    <td class="right">46</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=9" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Rich Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-09-04">9/4/12</time></td>
+                    <td class="right">520015</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">EU (London)</td>
+                    <td class="right">15</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=10" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Wayne Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2014-06-19">6/19/14</time></td>
+                    <td class="right">204349</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Stockholm)</td>
+                    <td class="right">33</td>
+                </tr>
+
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=11" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Krusty Krab Ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2015-08-21">8/21/15</time></td>
+                    <td class="right">765594</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">Canada (Central)</td>
+                    <td class="right">70</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=12" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">NetRangler Inc.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2016-05-07">5/7/16</time></td>
+                    <td class="right">558612</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">US East (Ohio)</td>
+                    <td class="right">41</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=13" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">ChumHum ltd.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-05-19">5/19/12</time></td>
+                    <td class="right">665137</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Ireland)</td>
+                    <td class="right">46</td>
+                </tr>
+                <tr class="active">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=14" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Rich Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2012-09-04">9/4/12</time></td>
+                    <td class="right">520015</td>
+                    <td class="center"><span class="status-badge">Active</span></td>
+                    <td class="left">EU (London)</td>
+                    <td class="right">15</td>
+                </tr>
+                <tr class="not-found">
+                    <td class="left">
+                        <div class="business-info">
+                            <div class="avatar-container">
+                                <img src="https://picsum.photos/32?random=15" alt="Avatar" class="avatar">
+                                <span class="badge-verified"><i class="fa-solid fa-check"></i></span>
+                            </div>
+                            <span class="business-name">Wayne Industries Co.</span>
+                        </div>
+                    </td>
+                    <td class="right"><time datetime="2014-06-19">6/19/14</time></td>
+                    <td class="right">204349</td>
+                    <td class="center"><span class="status-badge">Not Found</span></td>
+                    <td class="left">EU (Stockholm)</td>
+                    <td class="right">33</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 
