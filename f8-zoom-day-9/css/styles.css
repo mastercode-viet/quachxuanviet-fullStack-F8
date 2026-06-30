@@ -36,39 +36,7 @@ button {
   cursor: pointer;
 }
 
-:root {
-  --heading-font: "PT Sans", sans-serif;
-  --secondary-font: "Source Sans 3", sans-serif;
-  --primary-color: rgb(184, 2, 87);
-  --secondary-color: rgb(120, 61, 240);
-}
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.5rem;
-  font-family: var(--secondary-font);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--heading-font);
-}
-
-
-button {
-  border: none;
-  background: transparent;
-  cursor: pointer;
-}
 
 .header {
   display: flex;
@@ -330,6 +298,11 @@ textarea{
 .contact-form__button:hover{
   background: var(--primary-color);
   transition: background-color linear 0.3s;
+}
+iframe {
+  margin-top: 30px;
+  width: 100%;
+  height: 100vh;
 }
 /* Footer */
 
