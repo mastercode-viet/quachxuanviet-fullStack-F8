@@ -138,6 +138,42 @@ button {
   padding: 1px;
 
 }
+.btn-search{
+  position: relative;
+ 
+}
+.search-bar__input{
+  outline: none;
+  border: 1px solid #e0dede;
+  padding-left: 8px;
+  width: 250px;
+}
+.search-bar{
+  position: absolute;
+  top: 43px;
+  right: -39px;
+  display: flex;
+  justify-content: center;
+  height: 66px;
+  padding: 5px;
+  min-width: 330px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s,visibility .3s ease-in-out .3s;
+}
+.search-bar input::placeholder{
+  font-size: 1.5rem;
+}
+.search-bar__icon {
+  flex:1;
+  padding: 18px 10px;
+  background-color: var(--primary-color);
+}
+.btn-search input[type="checkbox"]:checked  ~ .search-bar{
+opacity: 1;
+visibility: visible;
+}
 
 .header-container {
   display: flex;
