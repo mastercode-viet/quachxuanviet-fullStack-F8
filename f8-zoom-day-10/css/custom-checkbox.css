@@ -1,0 +1,113 @@
+ table {
+   border-collapse: collapse;
+   margin: 100px auto;
+   max-width: 1200px;
+ }
+
+ .table th,
+ .table td {
+   padding: 50px;
+   text-align: center;
+   color: #9e9c9c;
+   font-size: 20px;
+ }
+
+ .checkbox {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s ease-in-out;
+
+ }
+
+ .checkbox::before {
+   content: "";
+   position: absolute;
+   display: block;
+   width: 30px;
+   height: 30px;
+   border: 2px solid #797777;
+   border-radius: 3px;
+ }
+
+ .checkbox:has([type="checkbox"]:checked)::before {
+   background: #009688;
+   border: none;
+   transition: background-color 0.6s ease-in-out;
+ }
+
+ .checkbox:has([type="checkbox"]:checked)::after {
+   content: "";
+   position: absolute;
+   top: -14px;
+   right: 36px;
+   display: block;
+   width: 6px;
+   height: 12px;
+   border: 4px solid;
+   border-color: transparent white white transparent;
+   rotate: 42deg;
+ }
+
+ .radio {
+   position: relative;
+   display: inline-block;
+   width: 30px;
+   height: 30px;
+   border: 2px solid #797777;
+   border-radius: 50%;
+   transition: all 0.3s ease-in-out;
+ }
+
+
+ .radio:has([type="radio"]:checked) {
+   border: 2px solid #009688;
+ }
+
+ .radio:has([type="radio"]:checked)::after {
+   content: "";
+   background: #009688;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: inline-block;
+   width: 20px;
+   height: 20px;
+   border-radius: 50%;
+
+ }
+
+ .switch {
+   position: relative;
+   display: inline-block;
+   width: 75px;
+   height: 30px;
+   background-color: #ccc;
+   border-radius: 30px;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .switch::before {
+   content: "";
+   position: absolute;
+   top: -5px;
+   left: 0;
+   display: inline-block;
+   width: 40px;
+   height: 40px;
+   background: #c2c1c1;
+   box-shadow: 0 0 4px #ccc;
+   border-radius: 50%;
+   transition: all 0.3s ease-in-out;
+ }
+
+ .switch:has([type="checkbox"]:checked)::before {
+   left: 40px;
+   background: #009688;
+ }
+
+ .switch:has([type="checkbox"]:checked) {
+   background-color: #72d9cefc;
+ }
