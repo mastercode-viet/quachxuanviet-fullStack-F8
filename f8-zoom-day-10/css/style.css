@@ -90,45 +90,52 @@ button {
   cursor: pointer;
 
 }
-.nav > li {
-   position: relative;
+
+.nav>li {
+  position: relative;
 }
-.nav > li:hover .sub-menu{
+
+.nav>li:hover .sub-menu {
   opacity: 1;
   visibility: visible;
   transform: scale(1);
-  transition:opacity .3s,transform .3s;
+  transition: opacity .3s, transform .3s;
 }
-.nav .sub-menu{
- position: absolute;
- top:100%;
- left: -20px;
- width: 220px;
- background-color: #fff;
- opacity: 0;
- visibility: hidden;
- transform: scale(0);
- transform-origin: top;
- transition: opacity .3s,transform .3s,visibility 0s ease-in-out .3s;
+
+.nav .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: -20px;
+  width: 220px;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  transform-origin: top;
+  transition: opacity .3s, transform .3s, visibility 0s ease-in-out .3s;
 }
-.nav .sub-menu li:hover{
+
+.nav .sub-menu li:hover {
   background-color: var(--primary-color);
 }
-.nav .sub-menu li:hover a{
+
+.nav .sub-menu li:hover a {
   color: #fff;
 }
- .nav .sub-menu a:hover{
+
+.nav .sub-menu a:hover {
   transform: translateX(10px);
 }
-.nav .sub-menu  li a{
-    font-size: 16px;
-    color: rgba(0, 0, 0, 0.6);
-    line-height: 45px;
-     text-decoration: none;
-    display: block;
-    padding: 0 0 0 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease-in-out;
+
+.nav .sub-menu li a {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 45px;
+  text-decoration: none;
+  display: block;
+  padding: 0 0 0 25px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
 }
 
 .action-header {
@@ -143,17 +150,20 @@ button {
   padding: 1px;
 
 }
-.btn-search{
+
+.btn-search {
   position: relative;
- 
+
 }
-.search-bar__input{
+
+.search-bar__input {
   outline: none;
   border: 1px solid #e0dede;
   padding-left: 8px;
   width: 250px;
 }
-.search-bar{
+
+.search-bar {
   position: absolute;
   top: 43px;
   right: -39px;
@@ -165,20 +175,24 @@ button {
   background-color: #fff;
   opacity: 0;
   visibility: hidden;
-  transition: opacity .3s,visibility .3s ease-in-out .3s;
+  transition: opacity .3s, visibility .3s ease-in-out .3s;
 }
-.search-bar input::placeholder{
+
+.search-bar input::placeholder {
   font-size: 1.5rem;
 }
+
 .search-bar__icon {
-  flex:1;
+  flex: 1;
   padding: 18px 10px;
   background-color: var(--primary-color);
 }
-.btn-search input[type="checkbox"]:checked  ~ .search-bar{
-opacity: 1;
-visibility: visible;
+
+.btn-search input[type="checkbox"]:checked~.search-bar {
+  opacity: 1;
+  visibility: visible;
 }
+
 .header-container {
   display: flex;
   flex-direction: column;
@@ -275,9 +289,10 @@ main .inner {
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   transition: transform linear 0.3s;
 }
-.sidebar-menu li a:hover{
+
+.sidebar-menu li a:hover {
   color: var(--secondary-color);
-  transform:translateX(10px);
+  transform: translateX(10px);
 }
 
 .main-content {
@@ -311,7 +326,7 @@ main .inner {
 .course-menu a:hover {
   background-color: var(--secondary-color);
   color: #fff;
- 
+
 }
 
 .course-menu .active {
@@ -345,39 +360,42 @@ main .inner {
   height: 100%;
   object-fit: cover;
   display: block;
-   transition: all 0.6s ease-in-out;
-  
+  transition: all 0.6s ease-in-out;
+
 
 }
+
 .badge {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 60px;
-    height: 60px;
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    background: var(--primary-color) ;
-    color: #fff;
-  
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  background: var(--primary-color);
+  color: #fff;
+
 }
-.badge i{
-    position: absolute;
-    top: 10px;  
-    right: 12px;
-    color: #fff;
-    font-size: 18px;
-    transform: rotate(32deg);
-    z-index: 3;
+
+.badge i {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: #fff;
+  font-size: 18px;
+  transform: rotate(32deg);
+  z-index: 3;
 }
 
 .thumb-wapper {
   display: block;
   aspect-ratio: 1 / 0.8;
-   overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 
 }
-.course-img:hover{
+
+.course-img:hover {
   transform: scale(1.2);
   opacity: 0.8;
 }
@@ -432,29 +450,32 @@ main .inner {
   border-radius: 30px;
   background-color: var(--secondary-color);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
-.main-course .price-free:after, .main-course .price:after{
-     content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -18px;
-    transform: translateX(-50%);
-    width: 70%;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.7);
-    filter: blur(8px);
-    opacity: 0;
-    
+
+.main-course .price-free:after, .main-course .price:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -18px;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.7);
+  filter: blur(8px);
+  opacity: 0;
+
 }
+
 .main-course .price-free:hover, .main-course .price:hover {
   transform: translate(0, -10px);
 }
+
 .main-course .price-free:hover::after, .main-course .price:hover::after {
-    opacity: 1;
-    width: 85%;
-    filter: blur(8px);
+  opacity: 1;
+  width: 85%;
+  filter: blur(8px);
 }
 
 
@@ -640,15 +661,16 @@ footer {
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
+
 .action-scroll {
-   position: fixed;
-    right: 30px;
-    bottom: 10px;
-    width: 40px;
-    height: 40px;
-    background: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
+  position: fixed;
+  right: 30px;
+  bottom: 10px;
+  width: 40px;
+  height: 40px;
+  background: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
 }
