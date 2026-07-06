@@ -23,7 +23,7 @@
     }
 
     .single-product {
-        width: calc(50% - var(--product-spacing));
+        width: calc(100% / var(--product-columns) - var(--product-spacing));
         margin-left: var(--product-spacing);
     }
 
@@ -64,6 +64,12 @@
 @media (max-width: 767.98px) {
     .list-item {
         --product-columns: 1;
+        --product-spacing: 10px;
+    }
+
+    .single-product {
+        width: calc(100% / var(--product-columns) - var(--product-spacing));
+        margin-left: var(--product-spacing);
     }
 
 
