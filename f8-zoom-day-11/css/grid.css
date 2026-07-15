@@ -12,17 +12,6 @@
     padding-right: calc(var(--spacer) / 2);
 }
 
-.item {
-    font-weight: bold;
-    background-color: orange;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-transform: uppercase;
-    color: #fff;
-}
-
 .row {
     --spacer-x: var(--spacer);
     --spacer-y: 0;
@@ -188,7 +177,7 @@
 }
 
 /* offset */
-.row[class*="offset-"]>* {
+.row>[class*="offset-"] {
     margin-left: calc(100% / var(--columns) * var(--offset-number));
 }
 
