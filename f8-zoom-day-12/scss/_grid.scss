@@ -1,0 +1,159 @@
+@use 'sass:math';
+@use "sass:map";
+
+$grid-columns: 12;
+$gutter-width: 30px !default;
+$gutters: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 1.5,
+  5: 3,
+);
+
+/* container */
+.container-fluid {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: calc(var(--gutter-x) / 2);
+  padding-left: calc(var(--gutter-x) / 2);
+}
+
+.container {
+  @extend .container-fluid;
+}
+
+.row {
+  --gutter-x: #{$gutter-width};
+  --gutter-y: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: calc(var(--gutter-x) / -2);
+  margin-left: calc(var(--gutter-x) / -2);
+  margin-top: calc(var(--gutter-y) * -1);
+
+  >* {
+    margin-top: var(--gutter-y);
+    padding-right: calc(var(--gutter-x) / 2);
+    padding-left: calc(var(--gutter-x) / 2);
+  }
+
+}
+
+.col {
+  flex: 1 0;
+}
+
+
+/* breakpoints */
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+/* container-max-widths */
+$container-max-widths: (
+  xs:100%,
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);
+
+/* mixin start */
+
+/* media queries*/
+@mixin make-media-query($value) {
+  @media (min-width: #{$value}) {
+    @content
+  }
+}
+
+/* row-cols */
+@mixin make-row-cols($infix) {
+  @for $i from 1 through math.div($grid-columns, 2) {
+    .row-cols#{$infix}-#{$i}>* {
+      flex: 0 0 auto;
+      width: math.percentage(math.div(1, $i));
+    }
+  }
+}
+
+/* columns */
+@mixin make-col($infix) {
+  @for $i from 1 through $grid-columns {
+    .col#{$infix}-#{$i} {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($i , $grid-columns));
+    }
+  }
+}
+
+/* offsets */
+@mixin make-offsets($infix) {
+  @for $i from 0 to $grid-columns {
+    .offset#{$infix}-#{$i} {
+      margin-left: math.percentage(math.div($i , $grid-columns));
+    }
+  }
+}
+
+/* gutters */
+@mixin make-gutter($infix) {
+  @each $i , $ratio in $gutters {
+
+    .g#{$infix}-#{$i} {
+      --gutter-x: #{$gutter-width * $ratio};
+      --gutter-y: #{$gutter-width * $ratio};
+    }
+
+    .gx#{$infix}-#{$i} {
+      --gutter-x: #{$gutter-width * $ratio};
+    }
+
+    .gy#{$infix}-#{$i} {
+      --gutter-y: #{$gutter-width * $ratio};
+    }
+  }
+}
+
+/* mixin end */
+
+
+@each $bp, $value in $grid-breakpoints {
+  $infix: if($bp ==xs, "", -#{$bp});
+
+
+  @include make-media-query($value) {
+    @if $bp !=xs {
+      $max-width: map.get($container-max-widths, $bp);
+
+      /* container */
+      .container {
+        max-width: $max-width;
+      }
+    }
+
+    /* row-cols */
+    @include make-row-cols($infix);
+
+    /* columns */
+    @include make-col($infix);
+
+    /* offsets */
+    @include make-offsets($infix);
+
+    /* gutters */
+    @include make-gutter($infix);
+
+  }
+}
