@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <%- include("./partials/head.ejs") %>
+</head>
+
+<body class="page-contact">
+    <header class="header-wrapper">
+        <%- include("./partials/header.ejs") %>
+
+    </header>
+
+    <main class="contact-page">
+        <section class="contact">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-5 col-md-12 ">
+                        <div class="contact__info-wrap">
+                            <div class="contact__title-box">
+                                <h2 class="contact__title">Contact Us</h2>
+                            </div>
+
+                            <div class="contact__message-box">
+                                <p>
+                                    Our reports will help you better understand
+                                    your audience and target the right message to the right person.
+                                    Send your email marketing campaign in a fast and simple way.
+                                </p>
+                            </div>
+
+                            <ul class="contact__list">
+                                <li class="contact__item">
+                                    <span class="contact__icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <div class="contact__text">
+                                        <span>34 Street Name, City Name</span>
+                                        <span>Here, United States.</span>
+                                    </div>
+                                </li>
+                                <li class="contact__item">
+                                    <span class="contact__icon"><i class="fa-solid fa-phone"></i></span>
+                                    <div class="contact__text">
+                                        <a href="tel:+1223456789">+1 (222) 345 6789</a>
+                                    </div>
+                                </li>
+                                <li class="contact__item">
+                                    <span class="contact__icon"><i class="fa-solid fa-envelope"></i></span>
+                                    <div class="contact__text">
+                                        <a href="mailto:info@mywebsite.com">info@mywebsite.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-6 offset-1 col-md-12 offset-md-0">
+                        <form class="contact-form">
+                            <div class="contact-form__group">
+                                <label for="name">Name</label>
+                                <input id="name" type="text" name="name" />
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email" />
+                            </div>
+
+                            <div class="contact-form__group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn contact-form__submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <%- include("./partials/footer.ejs") %>
+        <script type="module" src="./main.js"></script>
+</body>
+
+</html>

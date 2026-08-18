@@ -1,0 +1,75 @@
+@use "../base";
+@use "../layout/grid";
+@use "../mixins" as *;
+@use "../variables";
+
+.services {
+    padding: 100px 0;
+
+    &__content {
+        margin: 0 auto 112px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        margin-bottom: 16px;
+        @extend %text-gray;
+        text-align: center;
+        font-family: var(--heading-font);
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+    &__title {
+        margin-bottom: 26px;
+        @extend %text-dark;
+        text-align: center;
+        font-family: var(--heading-font);
+        font-size: 4.2rem;
+        font-weight: 700;
+        line-height: 5.2rem;
+    }
+
+    &__desc {
+        margin: 0 auto;
+        @extend %text-gray;
+        text-align: center;
+        font-family: var(--text-font);
+        font-size: 1.8rem;
+        line-height: 3rem;
+    }
+
+    &__btn {
+        display: block;
+        width: max-content;
+        margin: 64px auto 0;
+    }
+}
+
+@include screen(md) {
+    .services {
+        padding: 40px 0 0 0;
+
+        &__content {
+            margin: 20px;
+
+            .services__subtitle {
+                font-size: 1.2rem;
+            }
+
+            .services__title {
+                font-size: 3rem;
+                line-height: 37px;
+            }
+
+            .services__desc {
+                font-size: 1.2rem;
+                line-height: 21px;
+            }
+        }
+
+        &__btn {
+            margin-bottom: 20px;
+        }
+    }
+}

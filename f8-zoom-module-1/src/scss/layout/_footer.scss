@@ -1,0 +1,149 @@
+@use "../variables";
+@use "../mixins" as *;
+@use "../components/transiton";
+
+.footer {
+    background-color: var(--dark);
+}
+
+.footer-top {
+    padding: 100px 0 55px;
+    border-bottom: 1px solid #313d39;
+}
+
+.footer__heading {
+    margin-bottom: 10px;
+
+    color: var(--white);
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 3rem;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-list__item {
+    color: #beccc7;
+}
+
+.footer-list__link {
+    display: block;
+
+    color: #BECCC7;
+    font-family: Manrope;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+
+
+    @extend %transition-color;
+}
+
+.footer-list__link:hover {
+    color: var(--white);
+}
+
+.footer__text {
+    color: #beccc7;
+    font-family: var(--text-font);
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+}
+
+.footer-map {
+    width: 100%;
+    height: 268px;
+    overflow: hidden;
+}
+
+.footer-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.footer-bottom {
+    padding: 28px 0;
+}
+
+.footer-bottom__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    width: fit-content;
+    margin-bottom: 12px;
+}
+
+.footer__copyright {
+    color: #beccc7;
+    font-family: var(--text-font);
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.social-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 36px;
+    height: 36px;
+
+    background-color: #beccc7;
+
+    @extend %transition-color;
+
+    i {
+        color: var(--dark);
+        @extend %transition-color;
+    }
+
+    &:hover {
+        background-color: var(--orange);
+
+        i {
+            color: var(--white);
+        }
+    }
+
+    &--active {
+        background-color: var(--orange);
+
+        i {
+            color: var(--white);
+        }
+    }
+}
+
+@include screen(md) {
+
+    .footer-top {
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    .social-links {
+        justify-content: flex-start;
+
+    }
+
+    .footer__copyright {
+        font-style: 1.4rem;
+    }
+}

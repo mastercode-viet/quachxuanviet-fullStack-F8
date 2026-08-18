@@ -1,0 +1,156 @@
+@use "../base";
+@use "../mixins" as *;
+@use "../variables";
+@use "../components/transiton";
+
+
+.contact-page {
+    padding: 100px 0 80px;
+    background-color: var(--white);
+}
+
+.contact {
+    &__row {
+        align-items: flex-start;
+    }
+
+    &__info-wrap {
+        padding-top: 32px;
+    }
+
+    &__title-box {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        @extend %section-title;
+    }
+
+    &__message-box {
+        position: relative;
+        margin-bottom: 56px;
+
+        p {
+            @extend %section-desc;
+            @extend %text-grey;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: flex-start;
+        gap: 17px;
+        @extend %text-grey;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        margin-top: 5px;
+        color: var(--orange);
+        font-size: 1.8rem;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        font-family: var(--text-font);
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        @extend %text-grey;
+
+        a {
+            color: inherit;
+        }
+    }
+}
+
+.contact-form {
+    width: 100%;
+    padding-top: 28px;
+
+    &__group {
+        margin-bottom: 35px;
+
+        label {
+            display: block;
+            margin-bottom: 12px;
+            font-family: var(--text-font);
+            font-size: 1.8rem;
+            font-weight: 500;
+            line-height: 2.4rem;
+            @extend %text-grey;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 22px 20px;
+            border: 1.6px solid rgba(17, 19, 20, 0.2);
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--dark);
+            font-family: var(--text-font);
+            font-size: 1.6rem;
+            outline: none;
+            @extend %transition-base;
+
+            &:focus {
+                border-color: rgba(1, 120, 72, 0.8);
+                box-shadow: 0 0 0 4px rgba(1, 120, 72, 0.08);
+            }
+        }
+
+        textarea {
+            min-height: 224px;
+            resize: vertical;
+        }
+    }
+
+    &__submit {
+        display: block;
+        margin-top: 32px;
+        margin-left: auto;
+        margin-right: 0;
+        padding: 22px 44px;
+        border-radius: 8px;
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        @extend %transition-base;
+    }
+}
+
+@include screen(md) {
+    .contact {
+        &__title {
+            font-size: 3rem;
+            line-height: 54px;
+        }
+
+        &__message-box p,
+        &__text {
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+        }
+
+        &__icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        &__list {
+            gap: 20px;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@use "../base";
+@use "../mixins";
+@use "../variables";
+@use "../components/transiton";
+
+
+.practice-heading {
+    padding: 100px 0;
+
+    .row {
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-size: 1.8rem;
+        @extend %section-subtitle;
+        @extend %text-dark;
+
+    }
+
+    &__title {
+        font-size: 4.2rem;
+        @extend %section-title;
+        @extend %text-dark;
+
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        @extend %section-desc;
+        @extend %text-dark;
+
+    }
+
+}
+
+@include mixins.screen(md) {
+    .practice-heading {
+        padding: 40px 0;
+
+        &__subtitle {
+            font-size: 1rem;
+            line-height: 15px;
+        }
+
+        &__title {
+            font-size: 3rem;
+            line-height: 35px;
+        }
+
+        &__desc {
+            font-size: 1rem;
+            line-height: 18px;
+        }
+
+    }
+}

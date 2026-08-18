@@ -1,0 +1,155 @@
+﻿@use "../base";
+@use "../mixins" as *;
+@use "../variables";
+@use "../components/transiton";
+
+.my-blog {
+    padding: 96px 0 48px;
+    text-align: center;
+
+    &__title {
+        font-size: 6rem;
+        margin-bottom: 24px;
+        @extend %section-title;
+
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        @extend %section-desc;
+        @extend %text-gray;
+
+
+    }
+}
+
+.lastest-story {
+    padding-bottom: 160px;
+
+    a {
+        display: block;
+        justify-self: center;
+        border-radius: 10px;
+    }
+
+
+}
+
+.blog-card {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 16px 48px rgba(18, 19, 21, 0.08);
+    @extend %transition-transform;
+    @extend %transition-shadow;
+
+    &--border {
+        border-radius: 24px;
+    }
+
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 32px 64px rgba(18, 19, 21, 0.12);
+    }
+
+    &__media {
+        overflow: hidden;
+        background: var(--white);
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 384px;
+        object-fit: cover;
+        @extend %transition-transform;
+    }
+
+    &:hover &__img {
+        transform: scale(1.05);
+    }
+
+    &__content {
+        padding: 32px 32px 40px;
+    }
+
+    &__meta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    &__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        color: var(--orange);
+        font-size: 1.8rem;
+    }
+
+    &__date {
+        color: var(--dark);
+        font-family: var(--text-font);
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.4rem;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        color: var(--dark);
+        font-family: var(--heading-font);
+        line-height: 1.2;
+        font-weight: 700;
+
+        &--large {
+            font-size: 3.4rem;
+        }
+    }
+
+    &__desc {
+        margin-bottom: 32px;
+        color: rgba(14, 20, 18, 0.7);
+        font-family: var(--text-font);
+        line-height: 3rem;
+        font-size: 1.8rem;
+    }
+
+    &__link {
+        display: inline-block;
+        color: var(--orange);
+        font-family: var(--text-font);
+
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        @extend %transition-color;
+
+        &--large {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        &:hover {
+            color: var(--dark);
+        }
+    }
+
+}
+
+@include screen(md) {
+    .my-blog {
+        padding: 40px 0;
+
+        &__title {
+            font-size: 3rem;
+        }
+
+        &__desc {
+            font-size: 1rem;
+            line-height: 21px;
+        }
+    }
+}

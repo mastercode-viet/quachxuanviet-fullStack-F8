@@ -1,0 +1,46 @@
+%section-subtitle {
+    color: var(--dark);
+    font-family: var(--heading-font);
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+%section-title {
+    color: var(--dark);
+    font-family: var(--heading-font);
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 7rem;
+}
+
+%section-desc {
+    color: var(--dark);
+    font-family: var(--text-font);
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 3rem;
+}
+
+%text-orange {
+    color: var(--orange);
+}
+
+%text-white {
+    color: var(--white);
+}
+
+%text-gray {
+    color: var(--gray);
+}
+
+%text-dark {
+    color: var(--dark);
+}
+
+%text-grey {
+    color: var(--grey);
+}

@@ -1,0 +1,24 @@
+// Reusable transition utilities
+$transition-fast: 0.2s ease-in-out;
+$transition-base: 0.3s ease-in-out;
+$transition-slow: 0.5s ease-in-out;
+
+%transition-base {
+    transition: all $transition-base;
+}
+
+%transition-transform {
+    transition: transform $transition-base, box-shadow $transition-base;
+}
+
+%transition-color {
+    transition: color $transition-base, background-color $transition-base, border-color $transition-base;
+}
+
+%transition-opacity {
+    transition: opacity $transition-base;
+}
+
+%transition-shadow {
+    transition: box-shadow $transition-base, transform $transition-base;
+}

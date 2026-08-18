@@ -1,0 +1,30 @@
+@use "./transiton";
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 15px 35px;
+    margin-top: 32px;
+    border: none;
+    background-color: var(--orange);
+    color: var(--white);
+    font-family: var(--text-font);
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 2.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    @extend %transition-base;
+
+    &:hover {
+        background-color: var(--white);
+        color: var(--orange);
+    }
+
+    &--small,
+    &--medium {
+        padding: 24px 56px;
+    }
+}

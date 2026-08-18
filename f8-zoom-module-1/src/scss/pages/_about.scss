@@ -1,0 +1,248 @@
+@use "../base";
+@use "../mixins";
+@use "../variables";
+@use "../components/transiton";
+
+.heading-text {
+    margin: 50px;
+
+    &__title {
+        text-align: center;
+        font-size: 4.2rem;
+        line-height: 5.2rem;
+        @extend %section-title;
+    }
+}
+
+.video {
+    padding: 100px 0;
+
+    &-wrapper {
+        position: relative;
+        overflow: hidden;
+        @extend %transition-transform;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .thumb {
+        display: block;
+        width: 100%;
+        height: auto;
+        @extend %transition-opacity;
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    .bg {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 20px 15px;
+        background-color: var(--orange);
+        color: var(--white);
+    }
+
+    .name {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+    }
+
+    .desc {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.2rem;
+    }
+
+    .action-play {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: var(--white);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        i {
+            content: "";
+            color: var(--orange);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.history {
+    padding: 100px 0;
+
+    .row {
+        align-items: center;
+    }
+
+    .history-text {
+        &__subtitle {
+            @extend %section-subtitle;
+            @extend %text-gray;
+        }
+
+        &__title {
+            @extend %section-title;
+            @extend %text-dark;
+        }
+
+        &__desc {
+            @extend %section-desc;
+            @extend %text-gray;
+        }
+
+    }
+
+    .history-image {
+        position: relative;
+        width: 100%;
+        overflow: visible;
+        z-index: var(--z-elevated);
+        @extend %transition-transform;
+
+        &:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            position: relative;
+            display: block;
+            width: 100%;
+            z-index: var(--z-elevated);
+            object-fit: cover;
+            @extend %transition-opacity;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 158px;
+            height: 270px;
+            background-color: var(--orange);
+            bottom: 0;
+            left: -30px;
+            z-index: var(--z-default);
+        }
+
+        &::after:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.exp {
+    margin-bottom: 100px;
+    padding: 100px 0;
+    text-align: center;
+    background-color: var(--yellow-light);
+
+    &__label {
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        @extend %section-subtitle;
+        @extend %text-dark;
+        @extend %transition-color;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+    &__title {
+        font-size: 4.2rem;
+        @extend %section-title;
+        @extend %text-dark;
+        @extend %transition-color;
+
+        &:hover {
+            color: var(--orange);
+        }
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        @extend %section-desc;
+        @extend %text-gray;
+    }
+}
+
+@include mixins.screen(md) {
+    .heading-text__title {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 32px;
+
+    }
+
+    .video {
+        padding: 10px 0;
+
+
+    }
+
+    .history {
+        padding: 30px 0;
+
+        .row {
+            flex-direction: column;
+        }
+
+        .history-text {
+            &__subtitle {
+                font-size: 1.2rem;
+            }
+
+            &__title {
+                font-size: 3rem;
+                line-height: 37px;
+            }
+
+            &__desc {
+                font-size: 1.2rem;
+                line-height: 21px;
+            }
+
+
+
+        }
+
+        .history-image {
+            width: 318.25px;
+            height: 318.25px;
+            justify-self: center;
+        }
+    }
+
+    .exp {
+        &__label {
+            font-size: 1.2rem;
+        }
+
+        &__title {
+            font-size: 3rem;
+            line-height: 37px;
+        }
+
+        &__desc {
+            font-size: 1.2rem;
+            line-height: 20px;
+        }
+    }
+}

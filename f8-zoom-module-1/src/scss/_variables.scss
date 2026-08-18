@@ -1,0 +1,26 @@
+$grid-breakpoints: (
+    xxl: 1400px,
+    xl: 1200px,
+    lg: 992px,
+    md: 768px,
+    sm: 576px,
+);
+
+:root {
+    --dark: #0e1412;
+    --dark-soft: #181d1f;
+    --heading-font: "Roboto Slab", serif;
+    --text-font: "Manrope", sans-serif;
+    --green: #017848;
+    --yellow-light: #f8ebc9;
+    --white: #fff;
+    --orange: #fd6038;
+    --yellow: #fed464;
+    --gray: #beccc7;
+    --border: #dbe1e3;
+    --grey: #586863;
+
+    --z-default: 1;
+    --z-elevated: 2;
+    --z-overlay: 3;
+}
